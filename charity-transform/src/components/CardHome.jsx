@@ -8,7 +8,7 @@ const CardHome = ({ image, title, desc, footer, nav }) => {
       <Box
         boxShadow="-1px 4px 5px 0px rgba(0,0,0,0.58)"
         borderRadius="1rem"
-        color="pink"
+        color="Black"
         width={{ base: "14rem", sm: "23rem" }}
         backgroundColor="white"
         padding="1rem"
