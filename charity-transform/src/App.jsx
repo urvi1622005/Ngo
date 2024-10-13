@@ -10,13 +10,14 @@ function App() {
   return (
     <Router>
       <Ngo />
-      <Feature/>
+      
       
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<Page />} />
         
       </Routes>
+      <Feature/>
       <Volunteer/>
       <Footer />
     </Router>
