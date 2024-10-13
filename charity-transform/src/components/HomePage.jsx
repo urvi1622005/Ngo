@@ -13,7 +13,7 @@ const HomePage = () => {
           
         </Text>
         <Text textAlign="center" fontSize={{ base: "0.7rem", sm: "1.5rem" }}>
-          "Charity transform
+          Charity transform
         </Text>
       </VStack>
       <Flex
@@ -27,24 +27,24 @@ const HomePage = () => {
         <CardHome
           title="Become a volunteer"
           image={img1}
-          desc="4 People Occupancy"
-          footer="rollaway bed"
-          nav="/rooms"
+          desc="Help today because tomorrow you may be the one who needs helping!"
+          footer="Read more"
+          nav=""
         />
         <CardHome
           title="Make Donation"
           image={img2}
-          desc=""
-          footer="rollaway bed"
-          nav="/rooms"
+          desc="Help today because tomorrow you may be the one who needs helping!"
+          footer="Read more"
+          nav=""
           
         />
         <CardHome
           title="fundrising"
           image={img3}
-          desc="2 People Occupancy"
-          footer="Balcony View"
-          nav="/rooms"
+          desc="Help today because tomorrow you may be the one who needs helping!"
+          footer="Read more"
+          nav=""
         />
       </Flex>
     </Box>
