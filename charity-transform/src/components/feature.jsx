@@ -2,12 +2,12 @@ import React from "react";
 
 const Feature = () => {
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-8">
-      <div className="max-w-full mx-auto">
+    <section className="bg-gray-50 border-rounded py-12 px-4 sm:px-8">
+      <div className="rounded max-w-full mx-auto">
         {/* Featured Project Section */}
         <div className="relative w-full h-[calc(100vh)] flex flex-col md:flex-row items-center">
           {/* Left Image Section */}
-          <div className="w-full h-full relative">
+          <div className="border-r-8   w-full h-full relative">
             <img
               src="/src/assets/img 5.png" // Replace with actual image URL
               alt="Smiling Child"
