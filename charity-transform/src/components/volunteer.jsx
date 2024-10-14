@@ -56,7 +56,7 @@ const Volunteer = () => {
             <div className="mt-6">
               <a
                 href="#"
-                className="inline-block px-6 py-2 bg-brown-600 text-white font-medium rounded-lg shadow-md hover:bg-brown-700 transition-colors"
+                className="inline-block px-6 py-2 bg-brown-600 text-Red font-medium rounded-lg shadow-md hover:bg-brown-700 transition-colors"
               >
                 Join With Us
               </a>
