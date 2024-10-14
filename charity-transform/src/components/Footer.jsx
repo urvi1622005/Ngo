@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <img
-              src="https://via.placeholder.com/150" // Replace with actual logo
+              src="/src/assets/logo.png" // Replace with actual logo
               alt="Kaladhara Group Logo"
               className="h-16 w-auto"
             />
