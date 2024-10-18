@@ -7,7 +7,7 @@ const Group = () => {
         <div className="relative bg-brown-500 rounded-lg overflow-hidden">
           {/* Image Section */}
           <img 
-            src="/src/assets/p.png" // Replace with your actual image path
+            src="/src/assets/group.png" // Replace with your actual image path
             alt="Kaladhara Group" 
             className="w-full h-full object-cover" 
           />
