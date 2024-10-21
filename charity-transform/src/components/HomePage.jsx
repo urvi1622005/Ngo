@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CardHome from "./CardHome";
 import img1 from "../assets/img3.png";
 import img2 from "../assets/img2.png";
-import img3 from "../assets/img4.png";z
+import img3 from "../assets/img4.png";
 
 // Framer Motion components
 const MotionBox = motion(Box);
@@ -14,8 +14,10 @@ const MotionFlex = motion(Flex);
 const HomePage = () => {
   return (
     <MotionBox
-      width="1280px"
-      marginTop="2rem"
+      backgroundColor="white"
+      color="black"
+      width="1520px"
+      marginTop="0 rem"
       paddingX={{ base: "1.5rem", sm: "7rem" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
