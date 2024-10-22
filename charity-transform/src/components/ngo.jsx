@@ -12,7 +12,7 @@ const Ngo = () => {
           <li><a href="#" className="hover:text-gray-500">Gallery</a></li>
           <li><a href="#" className="hover:text-gray-500">Blog</a></li>
           <li><a href="#" className="hover:text-gray-500">Contact</a></li>
-          <li><a href="#" className="bg-gray-600 px-5 py-5 rounded">Donate</a></li>
+          <li><a href="#" className="bg-white/25 px-4 py-6 ">Donate</a></li>
           <li><a href="#" className="hover:text-gray-500">Login</a></li>
         </ul>
       </nav>
