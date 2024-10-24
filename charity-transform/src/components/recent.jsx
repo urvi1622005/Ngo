@@ -1,103 +1,47 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import Image from 'next/image'
 
-const Recent = () => {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
+export default function Component() {
   return (
-    <motion.section
-      className="flex flex-col lg:flex-row p-6 lg:p-12 bg-[#f2f2f2] text-black"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Left Section - Brown Box with Image and Title */}
-      <div className="lg:w-1/3 bg-[#6f4f47] p-6 rounded-lg text-white flex flex-col items-center justify-center">
-        <motion.img
-          className="w-40 h-40 rounded-lg object-cover mb-4"
-          src="/src/assets/recent.png" // Replace with actual image URL
-          alt="Charity cause"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        />
-        <motion.h1
-          className="text-3xl font-bold mb-2 text-center"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          Recent Cause
-        </motion.h1>
-        <motion.p
-          className="text-center"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          Help today because tomorrow you may be the one who needs helping!
-        </motion.p>
+    <div className="bg-[#8B5E51] p-6 md:p-12 lg:p-16 text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <div className="lg:w-1/3">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Recent Cause</h2>
+            <p className="text-lg md:text-xl mb-6">
+              Help today because tomorrow you may be the one who needs helping!
+            </p>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden">
+              <Image
+                src="/placeholder.svg?height=320&width=320"
+                alt="Smiling girl in front of chalkboard"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          </div>
+          <div className="lg:w-2/3 space-y-6">
+            {[
+              {
+                title: "Big charity: build school for poor children.",
+                description: "Help today because tomorrow you may be the one who needs helping!",
+              },
+              {
+                title: "Building clean-water system for rural poor.",
+                description: "Help today because tomorrow you may be the one who needs helping!",
+              },
+              {
+                title: "First charity activity of this summer.",
+                description: "Help today because tomorrow you may be the one who needs helping!",
+              },
+            ].map((cause, index) => (
+              <div key={index} className="bg-white text-gray-800 p-6 rounded-lg shadow-md">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">{cause.title}</h3>
+                <p className="text-gray-600">{cause.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* Right Section - List of Causes */}
-      <div className="lg:w-2/3 grid grid-cols-1 lg:grid-cols-1 gap-6 lg:pl-8">
-        {/* Cause 1 */}
-        <motion.div
-          className="p-6 bg-white text-black rounded-lg shadow-lg"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-lg font-bold">Big charity: build school for poor children.</h2>
-          <p className="text-gray-500">
-            Help today because tomorrow you <br /> may be the one who needs helping!
-          </p>
-        </motion.div>
-
-        {/* Cause 2 */}
-        <motion.div
-          className="p-6 bg-white text-black rounded-lg shadow-lg"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-lg font-bold">Building clean-water system for rural poor.</h2>
-          <p className="text-gray-500">
-            Help today because tomorrow you <br /> may be the one who needs helping!
-          </p>
-        </motion.div>
-
-        {/* Cause 3 */}
-        <motion.div
-          className="p-6 bg-white text-black rounded-lg shadow-lg"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-lg font-bold">First charity activity of this summer.</h2>
-          <p className="text-gray-500">
-            Help today because tomorrow you <br /> may be the one who needs helping!
-          </p>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-};
-
-export default Recent;
+    </div>
+  )
+}
