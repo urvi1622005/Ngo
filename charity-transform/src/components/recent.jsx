@@ -1,44 +1,46 @@
-import Image from 'next/image'
-
 export default function Component() {
   return (
-    <div className="bg-[#8B5E51] p-6 md:p-12 lg:p-16 text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-          <div className="lg:w-1/3">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Recent Cause</h2>
-            <p className="text-lg md:text-xl mb-6">
+    <div className="bg-[#8B5E51] p-8 min-h-screen flex items-center justify-center">
+      <div className="max-w-5xl w-full flex flex-col md:flex-row gap-8">
+        <div className="md:w-1/3 space-y-6">
+          <h1 className="text-white text-6xl font-bold leading-tight">
+            Recent<br />Cause
+          </h1>
+          <p className="text-white text-xl">
+            Help today because tomorrow you may be the one who needs helping!
+          </p>
+          <div className="rounded-full overflow-hidden w-64 h-64 mx-auto md:mx-0">
+            <img
+              src="./src/assets/recent.png"
+              alt="Smiling girl in front of chalkboard"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="md:w-2/3 space-y-6">
+          <div className="bg-white rounded-3xl p-6 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-2">
+              Big charity: build school for poor children.
+            </h2>
+            <p className="text-gray-600">
               Help today because tomorrow you may be the one who needs helping!
             </p>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=320&width=320"
-                alt="Smiling girl in front of chalkboard"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
           </div>
-          <div className="lg:w-2/3 space-y-6">
-            {[
-              {
-                title: "Big charity: build school for poor children.",
-                description: "Help today because tomorrow you may be the one who needs helping!",
-              },
-              {
-                title: "Building clean-water system for rural poor.",
-                description: "Help today because tomorrow you may be the one who needs helping!",
-              },
-              {
-                title: "First charity activity of this summer.",
-                description: "Help today because tomorrow you may be the one who needs helping!",
-              },
-            ].map((cause, index) => (
-              <div key={index} className="bg-white text-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2">{cause.title}</h3>
-                <p className="text-gray-600">{cause.description}</p>
-              </div>
-            ))}
+          <div className="bg-white rounded-3xl p-6 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-2">
+              Building clean-water system for rural poor.
+            </h2>
+            <p className="text-gray-600">
+              Help today because tomorrow you may be the one who needs helping!
+            </p>
+          </div>
+          <div className="bg-white rounded-3xl p-6 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-2">
+              First charity activity of this summer.
+            </h2>
+            <p className="text-gray-600">
+              Help today because tomorrow you may be the one who needs helping!
+            </p>
           </div>
         </div>
       </div>
