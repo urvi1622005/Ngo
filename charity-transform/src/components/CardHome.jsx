@@ -14,7 +14,7 @@ const CardHome = ({ image, title, desc, footer, nav }) => {
         borderRadius="1rem"
         color="Black"
         width={{ base: "14rem", sm: "23rem" }}
-        backgroundColor="gray.100" // Changed from white to light grey
+        backgroundColor="white" // Changed from white to light grey
         padding="1rem"
         marginX={{ base: "2rem", sm: "0" }}
         height={{ base: "auto", sm: "25rem" }}
