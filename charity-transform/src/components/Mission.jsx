@@ -16,7 +16,7 @@ const OurHistoryMission = () => {
         {/* Our History */}
         <div className="bg-white shadow-lg rounded-lg p-6">
           <img
-            src="/path-to-history-image.jpg" 
+            src="/src/assets/class.png" 
             alt="Our History"
             className="w-full h-56 object-cover rounded-lg"
           />
@@ -32,7 +32,7 @@ const OurHistoryMission = () => {
         {/* Our Mission */}
         <div className="bg-white shadow-lg rounded-lg p-6">
           <img
-            src="/path-to-mission-image.jpg"
+            src="/src/assets/img 5.png"
             alt="Our Mission"
             className="w-full h-56 object-cover rounded-lg"
           />
