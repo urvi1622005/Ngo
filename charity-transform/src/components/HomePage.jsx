@@ -25,6 +25,7 @@ const HomePage = () => {
     >
       <VStack>
         <MotionText
+          padding={"2rem"}
           fontSize={{ base: "1rem", sm: "2rem" }}
           fontWeight={700}
           initial={{ y: -50, opacity: 0 }}
@@ -45,10 +46,10 @@ const HomePage = () => {
       </VStack>
 
       <MotionFlex
-        gap={4}
+        gap={6}
         flexDirection={{ base: "column", sm: "row" }}
         paddingY="1rem"
-        paddingX={{ base: "", sm: "2rem" }}
+        paddingX={{ base: "1rem", sm: "2rem" }}
         justifyContent="space-between"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
