@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Ngo = () => {
   return (
-    <div className="min-h-screen bg-gray-100 relative">
+    <div className="min-h-screen bg-gray-100 relative overflow-x-hidden">
       {/* Navbar */}
       <nav className="absolute top-0 left-0 w-full bg-transparent text-white z-10">
         <ul className="flex justify-between lg:justify-center items-center space-x-4 lg:space-x-9 py-5 px-4 lg:px-0 border-b border-white/30">
@@ -24,13 +24,13 @@ const Ngo = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative"
+          className="relative overflow-x-hidden" // Added overflow-x-hidden here as well
         >
           {/* Responsive Image */}
           <img
             src="/src/assets/pic1.png"
             alt="Children smiling"
-            className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[calc(100vh)] object-cover"
+            className="w-full h-[70vh] sm:h-[40vh] md:h-[70vh] lg:h-[98vh] object-cover"
           />
 
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white px-4 text-center">
@@ -38,7 +38,7 @@ const Ngo = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 0.5, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-3xl lg:text-5xl mb-2 lg:mb-4"
+              className=" font-normal text-2xl lg:text-4xl mb-2 lg:mb-4"
             >
               Join Us Today to
             </motion.p>
@@ -46,7 +46,7 @@ const Ngo = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-5xl lg:text-7xl font-bold leading-tight"
+              className="text-9xl lg:text-6xl font-bold leading-tight"
             >
               TRANSFORM<br />THE SOCIETY
             </motion.h1>
