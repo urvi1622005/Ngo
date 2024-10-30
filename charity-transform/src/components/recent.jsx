@@ -6,7 +6,7 @@ export default function Component() {
           <h1 className="text-white text-6xl font-bold leading-tight">
             Recent<br />Cause
           </h1>
-          <p className="text-white text-xl">
+          <p className="text-white text-3xl">
             Help today because tomorrow you may be the one who needs helping!
           </p>
           <div className="rounded-full overflow-hidden w-64 h-64 mx-auto md:mx-0">
