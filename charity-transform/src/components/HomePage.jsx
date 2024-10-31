@@ -25,7 +25,7 @@ const HomePage = () => {
     >
       <VStack>
         <MotionText
-          padding={"2rem"}
+          padding={"6rem"}
           fontSize={{ base: "1rem", sm: "2rem" }}
           fontWeight={700}
           initial={{ y: -50, opacity: 0 }}
