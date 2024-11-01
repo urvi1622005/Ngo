@@ -30,7 +30,7 @@ const Ngo = () => {
           <img
             src="/src/assets/pic1.png"
             alt="Children smiling"
-            className="w-full h-[70vh] sm:h-[40vh] md:h-[70vh] lg:h-[98vh] object-cover"
+            className="w-full h-[80vh] sm:h-[40vh] md:h-[70vh] lg:h-[100vh] object-cover"
           />
 
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white px-4 text-center">
