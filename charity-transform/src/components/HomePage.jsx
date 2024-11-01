@@ -18,7 +18,7 @@ const HomePage = () => {
       color="black"
       maxWidth="100%"
       paddingX={{ base: "1rem", sm: "2rem", lg: "4rem" }}
-      paddingY="2rem"
+      paddingY="3rem"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
