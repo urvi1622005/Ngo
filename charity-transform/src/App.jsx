@@ -2,36 +2,46 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Ngo from './components/ngo';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
-import Page from './components/Page';
-import Feature from './components/feature'
-import Volunteer from './components/volunteer';
+import AboutPage from './components/AboutPage';
+import GalleryPage from './components/Gallery';
+import BlogPage from './components/Blog';
 import Recent from './components/recent';
 import President from './components/President';
 import Content from './components/Content';
 import Donation from './components/Donation';
-import Mission from './components/Mission'; 
+import Mission from './components/Mission';
+import Feature from './components/feature';
+import Volunteer from './components/volunteer';
+import LoginPage from './components/Login';
 
 function App() {
   return (
     <Router>
       <Ngo />
-      
-      
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<Page />} />
+        {/* Home route with additional homepage components */}
+        <Route path="/" element={
+          <>
+            <HomePage />
+            <Recent />
+            <President />
+            <Content />
+            <Donation />
+            <Mission />
+            <Feature />
+            <Volunteer />
+          </>
+        } />
         
+        {/* Other routes with their exclusive components */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
-      <Recent/>
-      <President/>
-      <Content/>
-      <Donation/>
-      <Mission/>
-      <Feature/>
-      <Volunteer/>
       <Footer />
     </Router>
   );
 }
 
-export default App; 
+export default App;
