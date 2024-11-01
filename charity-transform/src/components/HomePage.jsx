@@ -16,7 +16,7 @@ const HomePage = () => {
     <MotionBox
       backgroundColor="gray.100"
       color="black"
-      maxWidth="100%"
+      maxWidth="100%"                
       paddingX={{ base: "1rem", sm: "2rem", lg: "4rem" }}
       paddingY="3rem"
       initial={{ opacity: 0 }}
