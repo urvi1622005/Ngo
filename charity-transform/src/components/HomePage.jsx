@@ -16,17 +16,17 @@ const HomePage = () => {
     <MotionBox
       backgroundColor="gray.100"
       color="black"
-      width="1520px"
-      marginTop="0 rem"
-      paddingX={{ base: "1.5rem", sm: "7rem" }}
+      maxWidth="100%"
+      paddingX={{ base: "1rem", sm: "2rem", lg: "4rem" }}
+      paddingY="2rem"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <VStack>
+      <VStack spacing={4} textAlign="center" mb={{ base: "2rem", sm: "4rem" }}>
         <MotionText
-          padding={"6rem"}
-          fontSize={{ base: "1rem", sm: "2rem" }}
+          paddingTop="4rem"
+          fontSize={{ base: "1.5rem", sm: "2.5rem", lg: "3rem" }}
           fontWeight={700}
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -35,8 +35,9 @@ const HomePage = () => {
           Welcome to Charity
         </MotionText>
         <MotionText
-          textAlign="center"
-          fontSize={{ base: "0.7rem", sm: "1.5rem" }}
+          fontSize={{ base: "0.9rem", sm: "1.25rem", lg: "1.5rem" }}
+          color="gray.600"
+          maxWidth="800px"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -46,11 +47,11 @@ const HomePage = () => {
       </VStack>
 
       <MotionFlex
+        wrap="wrap"
+        justifyContent="center"
         gap={6}
-        flexDirection={{ base: "column", sm: "row" }}
         paddingY="1rem"
-        paddingX={{ base: "1rem", sm: "2rem" }}
-        justifyContent="space-between"
+        paddingX={{ base: "0.5rem", sm: "1rem", lg: "2rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
