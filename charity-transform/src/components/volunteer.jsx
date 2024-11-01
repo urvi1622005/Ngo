@@ -8,27 +8,38 @@ const Volunteer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Images Section */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Replace src with the actual image URLs */}
-            <img
-              src="/src/assets/v1.png" // Replace with actual image
-              alt="Volunteer 1"
-              className="rounded-lg object-cover"
-            />
-            <img
-              src="/src/assets/v2.png" // Replace with actual image
-              alt="Volunteer 2"
-              className="rounded-lg object-cover"
-            />
-            <img
-              src="/src/assets/v3.png" // Replace with actual image
-              alt="Volunteer 3"
-              className="rounded-lg object-cover"
-            />
-            <img
-              src="/src/assets/v4.png" // Replace with actual image
-              alt="Volunteer 4"
-              className="rounded-lg object-cover"
-            />
+            <div className="flex flex-col items-center">
+              <img
+                src="/src/assets/v1.png"
+                alt="Volunteer 1"
+                className="rounded-lg object-cover"
+              />
+              <p className="mt-2 text-gray-700">Dr. Shanky Jain</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/src/assets/v2.png"
+                alt="Volunteer 2"
+                className="rounded-lg object-cover"
+              />
+              <p className="mt-2 text-gray-700">Karan</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/src/assets/v3.png"
+                alt="Volunteer 3"
+                className="rounded-lg object-cover"
+              />
+              <p className="mt-2 text-gray-700">Ankur</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/src/assets/v4.png"
+                alt="Volunteer 4"
+                className="rounded-lg object-cover"
+              />
+              <p className="mt-2 text-gray-700">Anand</p>
+            </div>
           </div>
 
           {/* Text Section */}
@@ -56,7 +67,7 @@ const Volunteer = () => {
             <div className="mt-6">
               <a
                 href="#"
-                className="inline-block px-6 py-2 bg-Brown-600 text-Red font-medium rounded-lg shadow-md hover:bg-brown-700 transition-colors"
+                className="inline-block px-6 py-2 bg-Brown-600 text-black font-medium rounded-lg shadow-md hover:bg-brown-700 transition-colors"
               >
                 Join With Us
               </a>
