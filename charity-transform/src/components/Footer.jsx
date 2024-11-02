@@ -3,7 +3,7 @@ import mapImage from "../assets/map.png"; // Update this path with the actual pa
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-800 text-white py-12">
+    <footer className="relative bg-black-200 text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         
         {/* Footer Content */}
