@@ -5,9 +5,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brown: {
-          400: '#592720  ',  // Customize the shade of brown
+        Brown:{
+          200: '#705C53',
+
         },
+        brown: {
+          400: '#592720  ', 
+       },
+        gray:{
+          200:'#dcdcdc',
+        },
+        black:{
+          200: '#2A2A2A',
+        }
       },
     },
   },
