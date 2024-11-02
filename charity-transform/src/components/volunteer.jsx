@@ -65,12 +65,12 @@ const Volunteer = () => {
               <li>Joining is totally free. We don’t need any money from you.</li>
             </ul>
             <div className="mt-6">
-              <a
-                href="#"
-                className="inline-block px-6 py-2 bg-Brown-600 text-black font-medium rounded-lg shadow-md hover:bg-brown-700 transition-colors"
-              >
-                Join With Us
-              </a>
+            <a
+              href="#"
+              className="inline-block font-bold px-6 py-4 bg-Brown-200 text-black rounded-lg shadow-md hover:bg-brown-700 transition-colors"
+            >
+             Join With Us
+            </a>
             </div>
           </div>
         </div>
