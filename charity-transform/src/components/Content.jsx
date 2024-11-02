@@ -38,6 +38,7 @@ const Content = () => {
           {/* Right Section */}
           <motion.div
             variants={containerVariants}
+            gap="2rem"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.4 }} // Delayed animation for the right section
