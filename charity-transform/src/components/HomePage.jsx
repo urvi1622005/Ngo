@@ -62,8 +62,9 @@ const HomePage = () => {
           image={img1}
           desc="Help today because tomorrow you may be the one who needs helping!"
           footer="Read more"
-          margin="10vh"
-          alignItems="center"
+          margin="auto"
+          
+          alignItems="flex-end"
           justifyContent="center"
           display="flex"
           nav=""
