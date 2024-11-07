@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -7,36 +7,60 @@ const MotionBox = motion(Box);
 
 const CardHome = ({ image, title, desc, footer, nav }) => {
   return (
-    <NavLink to={nav}>
+    <NavLink to={nav} style={{ textDecoration: "none" }}>
       <MotionBox
-      
-        boxShadow="-1px 4px 5px 0px rgba(0,0,0,0.58)"
-        borderRadius="1rem"
-        color="Black"
-        width={{ base: "14rem", sm: "23rem" }}
-        backgroundColor="white" // Changed from white to light grey
-        padding="1rem"
-        marginX={{ base: "2rem", sm: "0" }}
-        height={{ base: "auto", sm: "25rem" }}
-        whileHover={{ scale: 1.05 }} // Add a slight scaling effect on hover
-        whileTap={{ scale: 0.95 }} // Add a shrinking effect when the card is clicked/tapped
-        initial={{ opacity: 0, y: 50 }} // Start from opacity 0 and translate Y
-        animate={{ opacity: 1, y: 0 }} // Fade in and slide up
-        transition={{ duration: 0.5 }} // Transition effect duration
+        position="relative"
+        overflow="hidden"
+        boxShadow="lg"
+        borderRadius="lg"
+        backgroundColor="white"
+        color="black"
+        width={{ base: "90%", sm: "80%", lg: "22rem" }}
+        height={{ base: "auto", lg: "30rem" }}
+        padding="1.5rem"
+        whileHover={{
+          scale: 1.02,
+          boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.15)"
+        }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <Flex width="330px" height="230px" flexDirection="column" gap={2}>
+        {/* Image Section */}
+        <Box
+          position="absolute"
+          top="1rem"
+          right="1rem"
+          width="8rem"
+          height="8rem"
+          borderRadius="md"
+          overflow="hidden"
+        >
           <Image
-            borderRadius="1rem"
-            width="50%"
-            height={{ base: "10rem", sm: "15rem" }}
             src={image}
             objectFit="cover"
+            width="100%"
+            height="100%"
+            transform="scale(1.1)"
+            transition="transform 0.3s ease-in-out"
+            _hover={{ transform: "scale(1.2)" }}
           />
-          <Text fontSize={{ base: "1rem", sm: "1.5rem" }} fontWeight={600}>
-            {title}
+        </Box>
+
+        {/* Content Section positioned at the bottom */}
+        <Flex direction="column" height="100%" justify="flex-end" mt="auto">
+          <VStack align="start" spacing={3} mb="1rem">
+            <Text fontSize={{ base: "1.5rem", lg: "1.8rem" }} fontWeight="bold">
+              {title}
+            </Text>
+            <Text fontSize={{ base: "1rem", lg: "1.1rem" }} color="gray.700">
+              {desc}
+            </Text>
+          </VStack>
+
+          <Text fontSize="1rem" color="teal.500" fontWeight="semibold">
+            {footer}
           </Text>
-          <Text fontSize={{ base: "0.8rem", sm: "1rem" }}>{desc}</Text>
-          <Text fontSize={{ base: "0.8rem", sm: "1rem" }}>{footer}</Text>
         </Flex>
       </MotionBox>
     </NavLink>
