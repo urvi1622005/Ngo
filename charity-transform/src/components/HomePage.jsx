@@ -63,6 +63,7 @@ const HomePage = () => {
           desc="Help today because tomorrow you may be the one who needs helping!"
           footer="Read more"
           margin="auto"
+          fontSize="5rem"
           
           alignItems="flex-end"
           justifyContent="center"
