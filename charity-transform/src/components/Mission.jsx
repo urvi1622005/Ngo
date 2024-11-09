@@ -2,7 +2,7 @@ import React from 'react';
 
 const OurHistoryMission = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 px-6 py-12 md:px-24 lg:px-40">
+    <div className="min-h-screen bg-gradient-to-br bg-gray-100  px-6 py-12 md:px-24 lg:px-40">
       {/* Section Title */}
       <div className="text-center mb-10">
         <h2 className="text-4xl font-extrabold text-gray-800 md:text-5xl">Our History & Mission</h2>
