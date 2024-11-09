@@ -13,9 +13,11 @@ import Mission from './components/Mission';
 import Feature from './components/feature';
 import Volunteer from './components/volunteer';
 import LoginPage from './components/Login';
+import Contact from './components/Contact';
 
 function App() {
   return (
+    <div className='bg-gray-100 min-h-screen'>
     <Router>
       
       <Routes>
@@ -38,10 +40,12 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/Contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 
