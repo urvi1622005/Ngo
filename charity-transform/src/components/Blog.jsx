@@ -21,8 +21,8 @@ const Blog = () => {
       {/* Main Content */}
       <main className="container mx-auto">
         {/* Header Section */}
-        
-          
+        <div className="relative mb-0">
+          {/* Image Space */}
           <img
             src="/src/assets/pic1.png" // Placeholder path for the header image
             alt="Blog Header"
@@ -30,7 +30,7 @@ const Blog = () => {
           />
           <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
           <motion.h1
-            className="absolute inset-y-0 left-0 flex justify-center items-center text-5xl font-extrabold text-white pl-8"
+            className="absolute ml-8 mt-2 inset-y-0 left-0 flex justify-center items-center text-7xl font-extrabold text-gray-300 pl-20"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -39,14 +39,14 @@ const Blog = () => {
           </motion.h1>
 
           {/* Search Bar */}
-          <div className="absolute top-20 left-1/2 transform -translate-x-1/2 max-w-lg w-full">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full p-4 rounded-lg border border-gray-400 border-rounded bg-gray-200 text-white pl-8 shadow-md focus:outline-none focus:shadow-lg transition-shadow duration-200"
-            />
-          </div>
-        
+          <div className="absolute top-60 mt-2 left-1/2 transform -translate-y-20 transform -translate-x-1/2 max-w-lg w-full ">
+         <input
+             type="text"
+             placeholder="Search..."
+             className="w-full p-4 rounded-xl border border-gray-400 bg-gray-200 text-white pl-8 shadow-md focus:outline-none focus:shadow-lg transition-shadow duration-200"
+         />
+        </div>
+        </div>
 
         {/* Content starts here */}
         
@@ -54,7 +54,7 @@ const Blog = () => {
             {/* Header Section */}
             <div className="text-center mb-10">
               <motion.h1 
-                className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500 relative inline-block"
+                className="text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500 relative inline-block"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
