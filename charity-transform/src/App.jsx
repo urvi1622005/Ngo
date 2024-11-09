@@ -17,11 +17,12 @@ import LoginPage from './components/Login';
 function App() {
   return (
     <Router>
-      <Ngo />
+      
       <Routes>
         {/* Home route with additional homepage components */}
         <Route path="/" element={
           <>
+            <Ngo />
             <HomePage />
             <Recent />
             <President />
