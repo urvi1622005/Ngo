@@ -2,7 +2,7 @@ import React from "react";
 
 const Volunteer = () => {
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-8">
+    <section className="bg-gray-100 py-12 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Volunteer Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
