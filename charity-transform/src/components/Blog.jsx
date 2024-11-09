@@ -5,7 +5,10 @@ const Blog = () => {
     <div className="bg-gray-100 px-4 py-8 sm:px-8 lg:px-16">
       {/* Header Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl text-black font-bold mb-2">BLOG</h1>
+      
+       BLOG
+      <span className="absolute left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 -bottom-2"></span>
+     
         <div className="relative max-w-md mx-auto">
           <input
             type="text"
@@ -17,21 +20,21 @@ const Blog = () => {
 
       {/* Subscription Section */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl text-black font-semibold mb-2">Inside NGO: Stories and Steps</h2>
-        <p className="mb-4 text-black">Subscribe to learn more about us and receive our latest blogs</p>
+        <h2 className="text-2xl text-black-200 font-semibold mb-2">Inside NGO: Stories and Steps</h2>
+        <p className="mb-4 text-black-200">Subscribe to learn more about us and receive our latest blogs</p>
         <div className="flex justify-center">
           <input
             type="email"
             placeholder="Enter your email"
             className="p-3 rounded-l-lg border border-gray-300 focus:outline-none"
           />
-          <button className="bg-black text-white p-3 rounded-r-lg">Subscribe</button>
+          <button className="bg-black text-black-200 p-3 rounded-r-lg">Subscribe</button>
         </div>
       </div>
 
       {/* Recent Blog Posts Section */}
       <div className="text-center mb-8">
-        <h3 className="text-xl text-black font-bold mb-4">Recent blog posts</h3>
+        <h3 className="text-xl text-black-200 font-bold mb-4">Recent blog posts</h3>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Blog Post 1 */}
           <div className="bg-white p-4 rounded-lg shadow-lg">
