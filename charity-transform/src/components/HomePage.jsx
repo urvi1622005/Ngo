@@ -14,7 +14,7 @@ const MotionFlex = motion(Flex);
 const HomePage = () => {
   return (
     <MotionBox
-      backgroundColor="gray.200"
+      backgroundColor="gray.100"
       color="black"
       maxWidth="100%"   
       maxHeight="100vh"             
