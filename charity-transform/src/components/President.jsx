@@ -27,7 +27,7 @@ const President = () => {
             transition={{ duration: 0.5, delay: 0.2 }} // Delayed animation for the image
           >
             <img 
-              src="/src/assets/v3.png" // Replace with actual president image
+              src="/assets/v3.png" // Replace with actual president image
               alt="Ankur Misra" 
               className="rounded-lg w-64 h-64 object-cover"
             />
@@ -51,7 +51,7 @@ const President = () => {
             <div className="mt-4">
               {/* Signature */}
               <img 
-                src="/src/assets/sign 1.png" // Replace with actual signature image
+                src="/assets/sign 1.png" // Replace with actual signature image
                 alt="Signature" 
                 className="inline-block"
               />

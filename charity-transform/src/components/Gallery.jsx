@@ -1,11 +1,12 @@
 import  { useState } from "react";
 import { PlusCircle, ChevronDown, ChevronUp } from "lucide-react";
+import heroImg from '../assets/pic1.png';
 
 const galleryData = {
   2023: [
-    { id: 1, src: "/src/assets/g1.png ", alt: "NGO Event 2023" },
-    { id: 2, src: "/src/assets/g2.png ", alt: "Community Outreach 2023" },
-    { id: 3, src: "/src/assets/b3.png", alt: "Fundraiser 2023" },
+    { id: 1, src: "/assets/g1.png ", alt: "NGO Event 2023" },
+    { id: 2, src: "/assets/g2.png ", alt: "Community Outreach 2023" },
+    { id: 3, src: "/assets/b3.png", alt: "Fundraiser 2023" },
   ],
   2022: [
     {
@@ -56,7 +57,7 @@ export default function NGOGallery() {
     <div>
       <div className="relative h-[300px]">
         <img
-          src="./src/assets/pic1.png "
+          src={heroImg}
           alt="Children playing"
           className="w-full h-full object-cover"
         />

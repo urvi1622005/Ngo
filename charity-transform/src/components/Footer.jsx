@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Left Section */}
           <div className="space-y-0.5">
             <img
-              src="/src/assets/logo2.png" // Replace with actual logo path
+              src="/assets/logo2.png" // Replace with actual logo path
               alt="Kaladhara Group Logo"
               className="h-[20vh] w-[40vw] object-cover"
             />

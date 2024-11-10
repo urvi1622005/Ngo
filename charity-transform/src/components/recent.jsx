@@ -12,7 +12,7 @@ export default function Component() {
           </p>
           <div className="rounded-full overflow-hidden w-64 h-64 mx-auto md:mx-0 border-4 border-white shadow-xl transform transition-transform duration-300 hover:scale-110">
             <img
-              src="./src/assets/recent.png"
+              src="/assets/recent.png"
               alt="Smiling girl in front of chalkboard"
               className="w-full h-full object-cover"
             />

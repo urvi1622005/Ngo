@@ -10,7 +10,7 @@ const Volunteer = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col items-center">
               <img
-                src="/src/assets/v1.png"
+                src="/assets/v1.png"
                 alt="Volunteer 1"
                 className="rounded-lg shadow-lg object-cover transition-transform duration-300 transform hover:scale-105"
               />
@@ -18,7 +18,7 @@ const Volunteer = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                src="/src/assets/v2.png"
+                src="/assets/v2.png"
                 alt="Volunteer 2"
                 className="rounded-lg shadow-lg object-cover transition-transform duration-300 transform hover:scale-105"
               />
@@ -26,7 +26,7 @@ const Volunteer = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                src="/src/assets/v3.png"
+                src="/assets/v3.png"
                 alt="Volunteer 3"
                 className="rounded-lg shadow-lg object-cover transition-transform duration-300 transform hover:scale-105"
               />
@@ -34,7 +34,7 @@ const Volunteer = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                src="/src/assets/v4.png"
+                src="/assets/v4.png"
                 alt="Volunteer 4"
                 className="rounded-lg shadow-lg object-cover transition-transform duration-300 transform hover:scale-105"
               />

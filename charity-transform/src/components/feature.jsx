@@ -9,7 +9,7 @@ const Feature = () => {
           {/* Left Image Section */}
           <div className="border-r-8   w-full h-full relative">
             <img
-              src="/src/assets/img 5.png" // Replace with actual image URL
+              src="/assets/img 5.png" // Replace with actual image URL
               alt="Smiling Child"
               className="object-cover w-full h-full rounded-xl"
             />
@@ -42,7 +42,7 @@ const Feature = () => {
           {/* Right Video Section */}
           <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-96 h-64">
             <img
-              src="/src/assets/img 6.png" // Replace with actual image URL
+              src="/assets/img 6.png" // Replace with actual image URL
               alt="Child Eating"
               className="object-cover w-full h-full rounded-xl"
             />

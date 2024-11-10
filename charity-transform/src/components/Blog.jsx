@@ -1,12 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import heroImg from '../assets/pic1.png';
 
 const Blog = () => {
   return (
     <div>
       <div className="relative h-[300px]">
         <img
-          src="./src/assets/pic1.png"
+          src={heroImg}
           alt="Children playing"
           className="w-full h-full object-cover"
         />
@@ -61,7 +62,7 @@ const Blog = () => {
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <div className="h-48 bg-gray-300 rounded-md mb-4">
                 <img
-                  src="/src/assets/b2.png"
+                  src="/assets/b2.png"
                   alt="Blog post 1"
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -80,7 +81,7 @@ const Blog = () => {
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <div className="h-48 bg-gray-300 rounded-md mb-4">
                 <img
-                  src="/src/assets/b1.png"
+                  src="/assets/b1.png"
                   alt="Blog post 2"
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -99,7 +100,7 @@ const Blog = () => {
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <div className="h-48 bg-gray-300 rounded-md mb-4">
                 <img
-                  src="/src/assets/b3.png"
+                  src="/assets/b3.png"
                   alt="Blog post 3"
                   className="w-full h-full object-cover rounded-md"
                 />
