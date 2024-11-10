@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import CardHome from "./CardHome";

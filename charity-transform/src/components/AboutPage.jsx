@@ -1,4 +1,6 @@
 // import React from "react";
+import heroImg from '/assets/pic1.png';
+
 const AboutPage = () => {
     const volunteers = [
       { id: 1, name: "John Doe", role: "Volunteer", image: "/placeholder.svg?height=300&width=300" },
@@ -11,7 +13,7 @@ const AboutPage = () => {
       <div className="min-h-screen">
         <div className="relative h-[400px]">
           <img
-            src="./src/assets/pic1.png "
+            src={heroImg}
             alt="Children playing"
             className="w-full h-full object-cover"
           />

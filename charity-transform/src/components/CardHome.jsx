@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";

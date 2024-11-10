@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import heroImg from '/assets/pic1.png';
+import logo from '/assets/logo2.png';
 
 const Hero = () => {
   return (
@@ -18,7 +20,7 @@ const Hero = () => {
         >
           {/* Background Image */}
           <motion.img
-            src="/src/assets/pic1.png"
+            src={heroImg}
             alt="Children smiling"
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
@@ -30,7 +32,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white px-4 text-center">
             {/* Draggable Logo with Framer Motion */}
             <motion.img
-              src="/src/assets/logo2.png" // Replace with actual logo path
+              src={logo} // Replace with actual logo path
               alt="Kaladhara Group Logo"
               className="h-[20vh] sm:h-[35vh] lg:h-[40vh] w-auto object-contain absolute top-12"
               initial={{ opacity: 0, scale: 0.8 }}

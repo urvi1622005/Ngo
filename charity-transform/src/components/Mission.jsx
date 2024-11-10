@@ -16,7 +16,7 @@ const OurHistoryMission = () => {
         {/* Our History */}
         <div className="bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-lg p-8 relative overflow-hidden">
           <img
-            src="/src/assets/class.png"
+            src="/assets/class.png"
             alt="Our History"
             className="w-full h-60 object-cover rounded-lg transform hover:scale-105 transition duration-300"
           />
@@ -35,7 +35,7 @@ const OurHistoryMission = () => {
         {/* Our Mission */}
         <div className="bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-lg p-8 relative overflow-hidden">
           <img
-            src="/src/assets/img 5.png"
+            src="/assets/img 5.png"
             alt="Our Mission"
             className="w-full h-60 object-cover rounded-lg transform hover:scale-105 transition duration-300"
           />
