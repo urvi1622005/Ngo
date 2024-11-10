@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import mapImage from "../assets/map.png"; // Update this path with the actual path to map.png
 
 const Footer = () => {
@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Left Section */}
           <div className="space-y-0.5">
             <img
-              src="/src/assets/logo.png" // Replace with actual logo path
+              src="/src/assets/logo2.png" // Replace with actual logo path
               alt="Kaladhara Group Logo"
-              className="h-16 w-auto"
+              className="h-[20vh] w-[40vw] object-cover"
             />
             <p className="text-gray-400">
               The secret to happiness lies in helping others. Never underestimate

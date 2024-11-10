@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Ngo from './components/ngo';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
+// import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import GalleryPage from './components/Gallery';
 import BlogPage from './components/Blog';
@@ -25,12 +25,12 @@ function App() {
         <Route path="/" element={
           <>
             <Hero/>
-            <HomePage />
-            <Recent />
+            {/* <HomePage /> */}
+            <Mission />
             <President />
             <Content />
+            <Recent />
             {/* <Donation /> */}
-            <Mission />
             <Feature />
             <Volunteer />
           </>

@@ -11,28 +11,28 @@ const CardHome = ({ image, title, desc, footer, nav }) => {
       <MotionBox
         position="relative"
         overflow="hidden"
-        boxShadow="lg"
-        borderRadius="lg"
+        boxShadow="md"
+        borderRadius="md"
         backgroundColor="white"
         color="black"
-        width={{ base: "90%", sm: "80%", lg: "22rem" }}
-        height={{ base: "auto", lg: "30rem" }}
-        padding="1.5rem"
+        width={{ base: "90%", sm: "80%", lg: "20rem" }}  // Adjusted width for smaller boxes
+        height={{ base: "auto", lg: "22rem" }}  // Adjusted height for smaller cards
+        padding="1rem"  // Adjusted padding for better spacing
         whileHover={{
-          scale: 1.02,
-          boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.15)"
+          scale: 1.05,
+          boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)"  // Softer hover effect
         }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
         {/* Image Section */}
         <Box
           position="absolute"
           top="1rem"
-          right="1rem"
-          width="8rem"
-          height="8rem"
+          left="1rem"  // Align image to the left
+          width="6rem"  // Adjusted size for the image
+          height="6rem" // Adjusted size for the image
           borderRadius="md"
           overflow="hidden"
         >
@@ -43,22 +43,28 @@ const CardHome = ({ image, title, desc, footer, nav }) => {
             height="100%"
             transform="scale(1.1)"
             transition="transform 0.3s ease-in-out"
-            _hover={{ transform: "scale(1.2)" }}
+            _hover={{ transform: "scale(1.15)" }}  // Slightly larger on hover
           />
         </Box>
 
         {/* Content Section positioned at the bottom */}
-        <Flex direction="column" height="100%" justify="flex-end" mt="auto">
-          <VStack align="start" spacing={3} mb="1rem">
-            <Text fontSize={{ base: "1.5rem", lg: "1.8rem" }} fontWeight="bold">
+        <Flex
+          direction="column"
+          justify="flex-end"
+          height="100%"
+          align="center"  // Center align content vertically
+          mt="auto"
+        >
+          <VStack align="center" spacing={2} mb="1rem">  {/* Center align title and description */}
+            <Text fontSize={{ base: "1.3rem", lg: "1.6rem" }} fontWeight="bold" textAlign="center">
               {title}
             </Text>
-            <Text fontSize={{ base: "1rem", lg: "1.1rem" }} color="gray.700">
+            <Text fontSize={{ base: "0.9rem", lg: "1rem" }} color="gray.700" textAlign="center">
               {desc}
             </Text>
           </VStack>
 
-          <Text fontSize="1rem" color="teal.500" fontWeight="semibold">
+          <Text fontSize="0.9rem" color="teal.500" fontWeight="semibold" textAlign="center">
             {footer}
           </Text>
         </Flex>

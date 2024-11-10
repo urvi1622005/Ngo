@@ -61,9 +61,14 @@ export default function NGOGallery() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl text-white font-bold">
+          <h1 className="text-2xl md:text-5xl ml-10 mr-10 text-gray-100 font-bold">
             Media Center
           </h1>
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-[30vw] p-3 rounded-lg border border-transparent bg-white/30 backdrop-blur-sm text-gray-100 placeholder-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
+          />
         </div>
       </div>
       <div className="container mx-auto px-4 py-8">

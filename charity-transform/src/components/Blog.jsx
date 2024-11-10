@@ -24,13 +24,13 @@ const Blog = () => {
       <div className="bg-gray-100 px-4 py-8 sm:px-8 lg:px-16">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <div className="relative max-w-md mx-auto">
+          {/* <div className="relative max-w-md mx-auto">
             <input
               type="text"
               placeholder="Search"
               className="w-full p-3 rounded-lg border border-transparent bg-white/30 backdrop-blur-md text-gray-100 placeholder-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Subscription Section */}
