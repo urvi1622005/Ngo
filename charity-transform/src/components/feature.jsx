@@ -40,11 +40,11 @@ const Feature = () => {
           </div>
 
           {/* Right Video Section */}
-          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-96 h-64">
+          <div className="absolute right-0 bottom-[-100px] transform -translate-y-1/2 w-96 h-64">
             <img
               src="/assets/img 6.png" // Replace with actual image URL
               alt="Child Eating"
-              className="object-cover w-full h-full rounded-xl"
+              className="object-cover w-[30vw] h-full rounded-xl"
             />
             {/* Play Button */}
             <button className="absolute inset-0 flex items-center justify-center text-white">

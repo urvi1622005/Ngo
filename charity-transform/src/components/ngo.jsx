@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import scanner from '/src/assets/scanner2.jpg'; // Adjust path as needed
-import { FaTimes } from 'react-icons/fa'; // Importing FontAwesome close icon
+import { FaTimes, FaBars } from 'react-icons/fa'; // Importing FontAwesome icons
 import { motion } from 'framer-motion'; // Import Framer Motion
 
 const Ngo = () => {
   const location = useLocation(); // Get the current location to highlight active page
   const [isPopupOpen, setIsPopupOpen] = useState(false); // State to manage popup visibility
   const [isCallConfirmationVisible, setIsCallConfirmationVisible] = useState(false); // State to manage call confirmation popup
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to manage sidebar visibility
 
   // Function to toggle the popup visibility
   const togglePopup = () => {
@@ -24,64 +25,144 @@ const Ngo = () => {
     setIsCallConfirmationVisible(false);
   };
 
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div>
-      {/* Navbar */}
+      {/* Navbar with Hamburger Icon */}
       <nav className="font-poppins absolute top-0 left-0 w-full bg-transparent text-white z-10 backdrop-blur-sm bg-white/8 border-b-2 border-gray-400 border-opacity-50 py-5">
-        <ul className="flex justify-between lg:justify-center items-center space-x-4 lg:space-x-9 px-10 py-1 lg:px-0">
-          <li>
-            <Link
-              to="/"
-              className={`hover:text-white py-6 transition duration-300 ${location.pathname === '/' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'}`}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className={`hover:text-white py-6 transition duration-300 ${location.pathname === '/about' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'}`}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/gallery"
-              className={`hover:text-white transition duration-300 ${location.pathname === '/gallery' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
-            >
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/blog"
-              className={`hover:text-white transition duration-300 ${location.pathname === '/blog' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className={`hover:text-white transition duration-300 ${location.pathname === '/contact' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`bg-white/20 text-white px-6 py-6 rounded-lg font-semibold hover:bg-white/40 hover:text-gray-800 transition duration-300 ${location.pathname === '/donate' ? 'bg-white/30 font-bold text-white' : 'text-gray-300'}`}
-              onClick={togglePopup} // Show the popup on click
-            >
-              Donate
-            </Link>
-          </li>
-        </ul>
+        <div className="flex justify-between mx-6 items-center lg:px-60">
+          {/* Hamburger Icon for Small Screens */}
+          <div className="lg:hidden">
+            <button onClick={toggleSidebar}>
+              <FaBars size={30} />
+            </button>
+          </div>
+          {/* Desktop Navbar */}
+          <ul className="hidden lg:flex justify-center items-center space-x-6 lg:space-x-16 py-1">
+            <li>
+              <Link
+                to="/"
+                className={`hover:text-white py-6 transition duration-300 ${location.pathname === '/' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'}`}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={`hover:text-white py-6 transition duration-300 ${location.pathname === '/about' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'}`}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gallery"
+                className={`hover:text-white transition duration-300 ${location.pathname === '/gallery' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className={`hover:text-white transition duration-300 ${location.pathname === '/blog' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className={`hover:text-white transition duration-300 ${location.pathname === '/contact' ? 'font-bold text-white border-b-2 px-2' : 'text-gray-300'} pb-6`}
+              >
+                Contact
+              </Link>
+            </li>
+            
+          </ul>
+          <li className='list-none'>
+              <Link
+                className={`bg-white/20 text-white px-6 py-6 rounded-lg font-semibold hover:bg-white/40 hover:text-gray-800 transition duration-300 ${location.pathname === '/donate' ? 'bg-white/30 font-bold text-white' : 'text-gray-300'}`}
+                onClick={togglePopup} // Show the popup on click
+              >
+                Donate
+              </Link>
+            </li>
+        </div>
       </nav>
 
-      {/* Donation Popup with Framer Motion */}
-      {isPopupOpen && (
+      {/* Sidebar for Mobile with Glassy Effect */}
+      <motion.div
+        className={`fixed inset-0 bg-black/60 z-20 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          className="w-3/4 h-full text-gray-50 bg-Brown-200/50 backdrop-blur-lg p-6 rounded-lg"
+          initial={{ x: '-100%' }}
+          animate={{ x: '0' }}
+          exit={{ x: '-100%' }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex justify-end">
+            <button onClick={toggleSidebar}>
+              <FaTimes size={30} />
+            </button>
+          </div>
+          <ul className="space-y-4">
+            <li>
+              <Link
+                to="/"
+                className={`block py-4 text-lg ${location.pathname === '/' ? 'font-bold' : ''}`}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={`block py-4 text-lg ${location.pathname === '/about' ? 'font-bold' : ''}`}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/gallery"
+                className={`block py-4 text-lg ${location.pathname === '/gallery' ? 'font-bold' : ''}`}
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className={`block py-4 text-lg ${location.pathname === '/blog' ? 'font-bold' : ''}`}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className={`block py-4 text-lg ${location.pathname === '/contact' ? 'font-bold' : ''}`}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </motion.div>
+      </motion.div>
+
+     {/* Donation Popup with Framer Motion */}
+     {isPopupOpen && (
         <motion.div
           className="fixed font-poppins inset-0 flex items-center justify-center z-20 backdrop-blur-sm bg-black/80"
           initial={{ opacity: 0 }}
