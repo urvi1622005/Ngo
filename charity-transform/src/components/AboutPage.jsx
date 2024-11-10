@@ -1,3 +1,4 @@
+// import React from "react";
 const AboutPage = () => {
     const volunteers = [
       { id: 1, name: "John Doe", role: "Volunteer", image: "/placeholder.svg?height=300&width=300" },

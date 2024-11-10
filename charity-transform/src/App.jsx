@@ -8,11 +8,13 @@ import BlogPage from './components/Blog';
 import Recent from './components/recent';
 import President from './components/President';
 import Content from './components/Content';
-import Donation from './components/Donation';
+// import Donation from './components/Donation';
 import Mission from './components/Mission';
 import Feature from './components/feature';
 import Volunteer from './components/volunteer';
 import LoginPage from './components/Login';
+import Hero from './components/hero';
+
 
 function App() {
   return (
@@ -22,11 +24,12 @@ function App() {
         {/* Home route with additional homepage components */}
         <Route path="/" element={
           <>
+            <Hero/>
             <HomePage />
             <Recent />
             <President />
             <Content />
-            <Donation />
+            {/* <Donation /> */}
             <Mission />
             <Feature />
             <Volunteer />
