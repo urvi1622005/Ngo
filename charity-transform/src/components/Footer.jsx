@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Left Section */}
           <div className="space-y-0.5">
             <img
-              src="/src/assets/logo.png" // Replace with actual logo path
+              src="/src/assets/kala.png" // Replace with actual logo path
               alt="Kaladhara Group Logo"
-              className="h-16 w-auto"
+              className="h-30 w-auto"
             />
             <p className="text-gray-400">
               The secret to happiness lies in helping others. Never underestimate
