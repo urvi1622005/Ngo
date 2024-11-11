@@ -4,8 +4,8 @@ export default function Component() {
       <div className="max-w-7xl w-full flex flex-col md:flex-row gap-8">
         {/* Left Section */}
         <div className="md:w-1/3 space-y-6">
-          <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
-            Recent <br />Cause
+          <h1 className="text-white text-center text-5xl md:text-6xl font-bold leading-tight">
+            Recent Cause
           </h1>
           <p className="text-white text-xl md:text-3xl">
             Help today because tomorrow you may be the one who needs helping!

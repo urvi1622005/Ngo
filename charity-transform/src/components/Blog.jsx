@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import heroImg from '../assets/pic1.png';
+import heroImg from "../assets/pic1.png";
 
 const Blog = () => {
   return (
@@ -46,9 +46,9 @@ const Blog = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="p-3 rounded-l-lg border border-transparent bg-white/30 backdrop-blur-md text-gray-100 placeholder-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
+              className="p-3 rounded-l-lg border border-gray-400 focus:outline-none shadow-md focus:shadow-lg transition-shadow duration-200"
             />
-            <button className="bg-blue-600 text-white p-3 rounded-r-lg hover:bg-blue-700 transition ease-in-out duration-200">
+            <button className="bg-gray-800 text-gray-100 p-3 rounded-r-lg hover:bg-gray-700 transition-colors duration-200 border border-gray-600">
               Subscribe
             </button>
           </div>
@@ -56,7 +56,9 @@ const Blog = () => {
 
         {/* Recent Blog Posts Section */}
         <div className="text-center mb-8">
-          <h3 className="text-xl text-black font-bold mb-4">Recent blog posts</h3>
+          <h3 className="text-xl text-black font-bold mb-4">
+            Recent blog posts
+          </h3>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Blog Post 1 */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -67,10 +69,13 @@ const Blog = () => {
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <p className="text-gray-500 text-sm mb-2">Posted on: 20 October 2024</p>
+              <p className="text-gray-500 text-sm mb-2">
+                Posted on: 20 October 2024
+              </p>
               <p className="text-gray-700 mb-4">
-                At our organization, we focus on raising awareness and improving access to hygiene
-                practices. Our latest program works on providing clean water and sanitation facilities.
+                At our organization, we focus on raising awareness and improving
+                access to hygiene practices. Our latest program works on
+                providing clean water and sanitation facilities.
               </p>
               <button className="text-blue-500 font-semibold hover:underline">
                 Read more
@@ -86,10 +91,12 @@ const Blog = () => {
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <p className="text-gray-500 text-sm mb-2">Posted on: 20 October 2024</p>
+              <p className="text-gray-500 text-sm mb-2">
+                Posted on: 20 October 2024
+              </p>
               <p className="text-gray-700 mb-4">
-                Education is the backbone of progress, and our initiative aims to provide learning
-                opportunities to underprivileged children.
+                Education is the backbone of progress, and our initiative aims
+                to provide learning opportunities to underprivileged children.
               </p>
               <button className="text-blue-500 font-semibold hover:underline">
                 Read more
@@ -105,10 +112,12 @@ const Blog = () => {
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <p className="text-gray-500 text-sm mb-2">Posted on: 20 October 2024</p>
+              <p className="text-gray-500 text-sm mb-2">
+                Posted on: 20 October 2024
+              </p>
               <p className="text-gray-700 mb-4">
-                We are committed to creating a positive impact on the environment and society through
-                our sustainable projects.
+                We are committed to creating a positive impact on the
+                environment and society through our sustainable projects.
               </p>
               <button className="text-blue-500 font-semibold hover:underline">
                 Read more

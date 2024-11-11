@@ -34,7 +34,7 @@ const Ngo = () => {
     <div>
       {/* Navbar with Hamburger Icon */}
       <nav className="font-poppins absolute top-0 left-0 w-full bg-transparent text-white z-10 backdrop-blur-sm bg-white/8 border-b-2 border-gray-400 border-opacity-50 py-5">
-        <div className="flex justify-between mx-6 items-center lg:px-60">
+        <div className="flex justify-between lg:mx-2 sm:mx-8 items-center lg:px-60">
           {/* Hamburger Icon for Small Screens */}
           <div className="lg:hidden">
             <button onClick={toggleSidebar}>

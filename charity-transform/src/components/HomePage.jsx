@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import CardHome from "./CardHome";
@@ -13,21 +13,20 @@ const MotionFlex = motion(Flex);
 
 const HomePage = () => {
   return (
-    
     <MotionBox
-      backgroundColor="gray.200"
+      backgroundColor="gray.100"
       color="black"
       maxWidth="100%"   
       maxHeight="100vh"             
       paddingX={{ base: "1rem", sm: "2rem", lg: "4rem" }}
-      paddingY="3rem"
+      paddingY="2rem"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <VStack spacing={4} textAlign="center" mb={{ base: "2rem", sm: "4rem" }}>
         <MotionText
-          paddingTop="2rem"
+          paddingTop="1rem"
           fontSize={{ base: "1.5rem", sm: "2.5rem", lg: "3rem" }}
           fontWeight={700}
           initial={{ y: -50, opacity: 0 }}
@@ -50,9 +49,10 @@ const HomePage = () => {
 
       <MotionFlex
         wrap="wrap"
+        paddingBottom="6rem"
         justifyContent="center"
         gap={10}
-        marginY={{ base: "3rem", sm: "6rem" }}
+        marginY={{ base: "3rem", sm: "-6rem" }}
         paddingX={{ base: "6rem", sm: "3rem", lg: "4rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -64,6 +64,7 @@ const HomePage = () => {
           desc="Help today because tomorrow you may be the one who needs helping!"
           footer="Read more"
           margin="auto"
+          fontSize="5rem"
           
           alignItems="flex-end"
           justifyContent="center"
