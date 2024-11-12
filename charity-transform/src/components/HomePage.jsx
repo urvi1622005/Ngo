@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+// import React from "react";
+import { Box, Flex} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import CardHome from "./CardHome";
 import img1 from "../assets/img3.png";
@@ -8,23 +8,24 @@ import img3 from "../assets/img4.png";
 
 // Framer Motion components
 const MotionBox = motion(Box);
-const MotionText = motion(Text);
+// const MotionText = motion(Text);
 const MotionFlex = motion(Flex);
 
 const HomePage = () => {
   return (
+    <>
     <MotionBox
       backgroundColor="gray.100"
       color="black"
       maxWidth="100%"   
       maxHeight="100vh"             
-      paddingX={{ base: "1rem", sm: "2rem", lg: "4rem" }}
-      paddingY="2rem"
+      paddingX={{ base: "2rem", sm: "2rem", lg: "4rem" }}
+      paddingY="1rem"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <VStack spacing={4} textAlign="center" mb={{ base: "2rem", sm: "4rem" }}>
+      {/* <VStack spacing={4} textAlign="center" mb={{ base: "2rem", sm: "4rem" }}>
         <MotionText
           paddingTop="1rem"
           fontSize={{ base: "1.5rem", sm: "2.5rem", lg: "3rem" }}
@@ -45,14 +46,14 @@ const HomePage = () => {
         >
         
         </MotionText>
-      </VStack>
+      </VStack> */}
 
       <MotionFlex
         wrap="wrap"
-        paddingBottom="6rem"
+        paddingBlockEnd={{base:"2rem", sm:"2rem"}}
         justifyContent="center"
         gap={10}
-        marginY={{ base: "3rem", sm: "-6rem" }}
+        marginY={{ base: "2rem", lg: "2rem" , sm:"1rem"}}
         paddingX={{ base: "6rem", sm: "3rem", lg: "4rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -87,6 +88,7 @@ const HomePage = () => {
         />
       </MotionFlex>
     </MotionBox>
+    </>
   );
 };
 

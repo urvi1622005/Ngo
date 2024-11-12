@@ -5,6 +5,7 @@
 
 body{
     font-family: "Poppins";
+    background: gray.100;
     
 /* Add this to your global or component-specific CSS */
 ::-webkit-scrollbar {

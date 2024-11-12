@@ -4,8 +4,8 @@ import logo from '/assets/logo2.png';
 
 const Hero = () => {
   return (
-    <div className="lg:min-h-screen sm:h-[90vh]">
-      <main className="relative mx-auto h-[100vh]">
+    <div className="lg:min-h-screen sm:h-[100vh]">
+      <main className="relative mx-auto">
         {/* Outer div with staggered animation for child elements */}
         <motion.div
           initial="hidden"
@@ -34,7 +34,7 @@ const Hero = () => {
             <motion.img
               src={logo} // Replace with actual logo path
               alt="Kaladhara Group Logo"
-              className="h-[20vh] sm:h-[35vh] lg:h-[40vh] w-auto object-contain absolute top-20"
+              className="h-[20vh] sm:h-[35vh] lg:h-[40vh] h-[50vw] w-auto object-contain absolute top-20"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -66,7 +66,7 @@ const Hero = () => {
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 0.9, scale: 1, transition: { duration: 1.2, ease: "easeOut" } },
               }}
-              className="font-poppins text-10xl lg:text-6xl sm:text-5xl  font-bold leading-tight"
+              className="font-poppins lg:text-6xl text-6xl w-[90vw] font-bold leading-tight"
             >
               MAKE A DIFFERENCE
             </motion.h1>
