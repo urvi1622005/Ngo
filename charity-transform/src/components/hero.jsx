@@ -66,7 +66,7 @@ const Hero = () => {
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 0.9, scale: 1, transition: { duration: 1.2, ease: "easeOut" } },
               }}
-              className="font-poppins lg:text-6xl text-6xl w-[90vw] font-bold leading-tight"
+              className="font-poppins lg:text-6xl text-6xl w-[100vw] font-bold leading-tight"
             >
               MAKE A DIFFERENCE
             </motion.h1>
