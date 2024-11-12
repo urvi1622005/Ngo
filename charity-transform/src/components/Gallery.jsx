@@ -30,12 +30,12 @@ export default function NGOGallery() {
     );
   };
 
-  const handleAddPhoto = (e) => {
-    e.preventDefault();
-    console.log('Adding photo for year:', newPhotoYear);
-    setShowAddPhotoModal(false);
-    setNewPhotoYear('');
-  };
+  // const handleAddPhoto = (e) => {
+  //   e.preventDefault();
+  //   console.log('Adding photo for year:', newPhotoYear);
+  //   setShowAddPhotoModal(false);
+  //   setNewPhotoYear('');
+  // };
 
   return (
     <div className="container mx-auto  ">
