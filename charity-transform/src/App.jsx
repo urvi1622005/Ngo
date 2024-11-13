@@ -8,12 +8,17 @@ import BlogPage from './components/Blog';
 import Recent from './components/recent';
 import President from './components/President';
 import Content from './components/Content';
-import Donation from './components/Donation';
+// import Donation from './components/Donation';
 import Mission from './components/Mission';
 import Feature from './components/feature';
 import Volunteer from './components/volunteer';
 import LoginPage from './components/Login';
+
+import Hero from './components/hero';
 import Contact from './components/Contact';
+
+import Contact from './components/Contact';
+
 
 function App() {
   return (
@@ -24,13 +29,16 @@ function App() {
         {/* Home route with additional homepage components */}
         <Route path="/" element={
           <>
+            <Hero/>
+
             <Ngo />
+
             <HomePage />
             <Recent />
+            <Mission />
             <President />
             <Content />
-            <Donation />
-            <Mission />
+            {/* <Donation /> */}
             <Feature />
             <Volunteer />
           </>

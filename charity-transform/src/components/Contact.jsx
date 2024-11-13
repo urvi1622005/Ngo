@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
+import heroImg from '/assets/pic1.png';
+
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,6 +24,29 @@ const Contact = () => {
   };
 
   return (
+
+    <div>
+      <div className="relative h-[300px]">
+        <img
+          src={heroImg}
+          alt="Children playing"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex gap-[30] items-center justify-center">
+          <h1 className="text-4xl md:text-5xl text-gray-100 font-bold ml-10 mr-20">
+            Contact Us
+          </h1>
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-[30vw] p-3 rounded-lg border border-transparent bg-white/30 backdrop-blur-sm text-gray-100 placeholder-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
+          />
+        </div>
+      </div>
+      <div className="flex container mx-auto flex-col items-center bg-gray-100 py-1 p-0 px-0">
+
+        
+
     <>
       <div className="flex container mx-auto flex-col items-center bg-gray-100 py-1 p-0 px-0">
         {/* Navbar */}
@@ -60,6 +86,7 @@ const Contact = () => {
             />
           </div>
         </main>
+
 
         {/* Main Contact Form Section */}
         <motion.div
@@ -125,7 +152,11 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
+
+    </div>
+
     </>
+
   );
 };
 

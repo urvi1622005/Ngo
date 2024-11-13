@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const OurHistoryMission = () => {
   return (
@@ -16,7 +16,7 @@ const OurHistoryMission = () => {
         {/* Our History */}
         <div className="bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-lg p-8 relative overflow-hidden">
           <img
-            src="/src/assets/class.png"
+            src="/assets/class.png"
             alt="Our History"
             className="w-full h-60 object-cover rounded-lg transform hover:scale-105 transition duration-300"
           />
@@ -26,7 +26,7 @@ const OurHistoryMission = () => {
               Discover the journey that brought us to where we are today.
             </p>
             <button className="mt-6 bg-Brown-200 text-white font-medium py-2 px-6 border-2 border-Brown-200 rounded-lg p-8 hover:bg-Brown-200 hover:text-white transition duration-300 shadow-md">
-              Read More
+             To be updated soon
             </button>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent opacity-30"></div>
@@ -35,7 +35,7 @@ const OurHistoryMission = () => {
         {/* Our Mission */}
         <div className="bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-lg p-8 relative overflow-hidden">
           <img
-            src="/src/assets/img 5.png"
+            src="/assets/img 5.png"
             alt="Our Mission"
             className="w-full h-60 object-cover rounded-lg transform hover:scale-105 transition duration-300"
           />
@@ -46,7 +46,7 @@ const OurHistoryMission = () => {
             </p>
            <button className="mt-6 bg-Brown-200 text-white font-medium py-2 px-6 border-2 border-Brown-200 rounded-lg p-8 hover:bg-Brown-200 hover:text-white transition duration-300 shadow-md">
 
-              Read More
+              To be updated soon
             </button>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent opacity-30"></div>

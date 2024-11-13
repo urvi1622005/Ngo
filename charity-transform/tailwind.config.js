@@ -19,6 +19,13 @@ module.exports = {
           200: '#2A2A2A',
         }
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Add Poppins as a custom font family
+      },
+      letterSpacing: {
+        superwide: '0.75em', // Custom letter spacing
+        superwide2: '0.35em'
+      },
     },
   },
   plugins: [],
