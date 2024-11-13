@@ -17,7 +17,7 @@ import LoginPage from './components/Login';
 import Hero from './components/hero';
 import Contact from './components/Contact';
 
-import Contact from './components/Contact';
+// import Contact from './components/Contact';
 
 
 function App() {
