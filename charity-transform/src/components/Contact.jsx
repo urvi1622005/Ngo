@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import heroImg from '/assets/pic1.png';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,16 +23,16 @@ const Contact = () => {
   };
 
   return (
-
     <div>
+      {/* Hero Section */}
       <div className="relative h-[300px]">
         <img
           src={heroImg}
           alt="Children playing"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex gap-[30] items-center justify-center">
-          <h1 className="text-4xl md:text-5xl text-gray-100 font-bold ml-10 mr-20">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex gap-8 items-center justify-center">
+          <h1 className="text-4xl md:text-5xl text-gray-100 font-bold">
             Contact Us
           </h1>
           <input
@@ -43,12 +42,10 @@ const Contact = () => {
           />
         </div>
       </div>
-      <div className="flex container mx-auto flex-col items-center bg-gray-100 py-1 p-0 px-0">
 
+      {/* Main Content */}
+      <div className="container mx-auto flex flex-col items-center bg-gray-100 py-10 px-4">
         
-
-    <>
-      <div className="flex container mx-auto flex-col items-center bg-gray-100 py-1 p-0 px-0">
         {/* Navbar */}
         <nav className="absolute top-0 left-0 w-full bg-transparent text-white z-10">
           <ul className="flex justify-between lg:justify-center items-center space-x-4 lg:space-x-9 py-5 px-4 lg:px-0 border-b border-white/30">
@@ -57,40 +54,14 @@ const Contact = () => {
             <li><Link to="/gallery" className="hover:text-gray-500">Gallery</Link></li>
             <li><Link to="/blog" className="hover:text-gray-500">Blog</Link></li>
             <li><Link to="/contact" className="hover:text-gray-500">Contact</Link></li>
-            <li><Link to="/donate" className="bg-white/25 px-4 py-6">Donate</Link></li>
+            <li><Link to="/donate" className="bg-white/25 px-4 py-1 rounded-md">Donate</Link></li>
             <li><Link to="/login" className="hover:text-gray-500">Login</Link></li>
           </ul>
         </nav>
 
-        {/* Header Section with Image */}
-        <main className="container mx-auto relative">
-          <img
-            src="/src/assets/pic1.png"
-            alt="Blog Header"
-            className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-md"
-          />
-          <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
-          <motion.h1
-            className="absolute inset-y-0 left-0 ml-8 mt-2 flex items-center text-7xl font-extrabold text-gray-300 pl-20"
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Contact
-          </motion.h1>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg w-full">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full p-4 rounded-xl border border-gray-400 bg-gray-100 text-black pl-8 shadow-md focus:outline-none focus:shadow-lg transition-shadow duration-200"
-            />
-          </div>
-        </main>
-
-
-        {/* Main Contact Form Section */}
+        {/* Contact Information & Form */}
         <motion.div
-          className="bg-white shadow-lg rounded-lg border pb-1 border-gray-200 p-4 sm:p-12 mt-5 w-full max-w-5xl"
+          className="bg-white shadow-lg rounded-lg border pb-1 border-gray-200 p-4 sm:p-12 mt-10 w-full max-w-5xl"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -108,7 +79,7 @@ const Contact = () => {
               <p><strong>Email:</strong> kaladharakatg@gmail.com</p>
             </div>
 
-            {/* Form */}
+            {/* Contact Form */}
             <form onSubmit={handleSubmit} className="md:w-1/2 space-y-4 text-left">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">DROP US A LINE</h2>
               <div className="flex space-x-4 flex-wrap md:flex-nowrap">
@@ -152,11 +123,7 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
-
     </div>
-
-    </>
-
   );
 };
 
