@@ -13,19 +13,26 @@ import Mission from './components/Mission';
 import Feature from './components/feature';
 import Volunteer from './components/volunteer';
 import LoginPage from './components/Login';
+
 import Hero from './components/hero';
+import Contact from './components/Contact';
+
 import Contact from './components/Contact';
 
 
 function App() {
   return (
+    <div className='bg-gray-100 min-h-screen'>
     <Router>
-      <Ngo />
+      
       <Routes>
         {/* Home route with additional homepage components */}
         <Route path="/" element={
           <>
             <Hero/>
+
+            <Ngo />
+
             <HomePage />
             <Recent />
             <Mission />
@@ -46,6 +53,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 

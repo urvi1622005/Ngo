@@ -15,9 +15,15 @@ const CardHome = ({ image, title, desc, footer, nav }) => {
         borderRadius="lg"
         background="white"
         color="black"
+
         width={{ base: "80vw", sm: "80vw", lg: "21rem" }}
         height={{ base: "auto", lg: "20rem" }}
         padding="1.25rem"
+
+        width={{ base: "90%", sm: "80%", lg: "21rem" }}
+        height={{ base: "auto", lg: "20rem" }}
+        padding="1.5rem"
+
         whileHover={{
           scale: 1.02,
           boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.15)"
