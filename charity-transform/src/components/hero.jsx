@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import heroImg from '/assets/pic1.png';
-import logo from '/assets/logo2.png';
 
 const Hero = () => {
   return (
@@ -29,26 +28,7 @@ const Hero = () => {
           />
 
           {/* Text Container */}
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white px-4 text-center">
-            {/* Draggable Logo with Framer Motion */}
-            <motion.img
-              src={logo} // Replace with actual logo path
-              alt="Kaladhara Group Logo"
-              className="h-[20vh] sm:h-[35vh] lg:h-[40vh] h-[50vw] w-auto object-contain absolute top-20"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              whileHover={{
-                scale: 1.1, // Slightly scale up on hover
-                rotate: 10, // Add slight rotation on hover
-                transition: { duration: 0.3, ease: "easeInOut" }
-              }}
-              drag // Enables dragging
-              dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }} // You can adjust this to limit the drag area
-            />
-
-
-            
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4">
             {/* Smaller Text - Claim the chance to */}
             <motion.p
               variants={{
