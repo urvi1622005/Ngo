@@ -50,11 +50,7 @@ const President = () => {
             </p>
             <div className="mt-4">
               {/* Signature */}
-              <img 
-                src="/assets/sign 1.png" // Replace with actual signature image
-                alt="Signature" 
-                className="inline-block"
-              />
+              
             </div>
           </motion.div>
         </div>
