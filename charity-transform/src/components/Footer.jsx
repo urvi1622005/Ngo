@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
 
       {/* Map Image in Right Corner */}
-      <div className="absolute bottom-4 right-8 opacity-80"> {/* Adjusted right position */}
+      <div className="absolute bottom-20 right-8 opacity-80"> {/* Adjusted right position */}
         <img
           src={mapImage}
           alt="Global Locations Map"
