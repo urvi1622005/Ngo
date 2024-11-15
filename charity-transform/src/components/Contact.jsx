@@ -54,7 +54,7 @@ const Contact = () => {
             <li><Link to="/gallery" className="hover:text-gray-500">Gallery</Link></li>
             <li><Link to="/blog" className="hover:text-gray-500">Blog</Link></li>
             <li><Link to="/contact" className="hover:text-gray-500">Contact</Link></li>
-            <li><Link to="/donate" className="bg-white/25 px-3 py-1 rounded-md">Donate</Link></li>
+            <li><Link to="/donate" className="bg-white/25 px-4 py-6">Donate</Link></li>
             <li><Link to="/login" className="hover:text-gray-500">Login</Link></li>
           </ul>
         </nav>
