@@ -6,11 +6,11 @@ const Group = () => {
       <div className="max-w-7xl mx-auto">
         <div className="relative bg-brown-500 rounded-lg overflow-hidden">
           {/* Image Section */}
-          <img 
+          {/* <img 
             src="/src/assets/group.png" // Replace with your actual image path
             alt="Kaladhara Group" 
             className="w-full h-full object-cover" 
-          />
+          /> */}
         </div>
 
         <div className="mt-8 text-white text-center">
