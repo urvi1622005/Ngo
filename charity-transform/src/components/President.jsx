@@ -10,7 +10,7 @@ const President = () => {
 
   return (
     <motion.div
-      className="bg-white py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
