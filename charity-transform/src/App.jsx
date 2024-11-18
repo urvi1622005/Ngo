@@ -13,7 +13,7 @@ import Mission from './components/Mission';
 import Feature from './components/feature';
 import Volunteer from './components/volunteer';
 import LoginPage from './components/Login';
-
+import Event from './components/event';
 import Hero from './components/hero';
 import Contact from './components/Contact';
 
@@ -40,6 +40,7 @@ function App() {
             <Content />
             {/* <Donation /> */}
             <Feature />
+            <Event />
             <Volunteer />
           </>
         } />
