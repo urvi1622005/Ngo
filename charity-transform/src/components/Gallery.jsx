@@ -156,243 +156,243 @@
 //     </div>
 //   );
 // }
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+// import React, { useState } from 'react';
+// import { motion } from 'framer-motion';
 
-const Gallery = () => {
-  const images = [
-    { src: './src/assets/g1.png', year: '2019' },
-    { src: './src/assets/g2.png', year: '2020' },
-    { src: './src/assets/b1.png', year: '2021' },
-    { src: './src/assets/b2.png', year: '2022' },
-    { src: './src/assets/b3.png', year: '2023' },
-    { src: './src/assets/b4.png', year: '2024' },
-  ];
+// const Gallery = () => {
+//   const images = [
+//     { src: './src/assets/g1.png', year: '2019' },
+//     { src: './src/assets/g2.png', year: '2020' },
+//     { src: './src/assets/b1.png', year: '2021' },
+//     { src: './src/assets/b2.png', year: '2022' },
+//     { src: './src/assets/b3.png', year: '2023' },
+//     { src: './src/assets/b4.png', year: '2024' },
+//   ];
 
-  const [startPhoneAnimation, setStartPhoneAnimation] = useState(false);
-  const [showGallery, setShowGallery] = useState(false);
-  const [selectedImages, setSelectedImages] = useState([]);
+//   const [startPhoneAnimation, setStartPhoneAnimation] = useState(false);
+//   const [showGallery, setShowGallery] = useState(false);
+//   const [selectedImages, setSelectedImages] = useState([]);
 
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setStartPhoneAnimation(true);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
+//   React.useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setStartPhoneAnimation(true);
+//     }, 5000);
+//     return () => clearTimeout(timer);
+//   }, []);
 
-  const handleImageClick = (image) => {
-    setSelectedImages([image]);
-    setShowGallery(true);
-  };
+//   const handleImageClick = (image) => {
+//     setSelectedImages([image]);
+//     setShowGallery(true);
+//   };
 
-  const styles = {
-    container: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      position: 'relative',
-      width: '100%',
-      height: '100vh',
-      backgroundColor: '#f8f9fa',
-      overflow: 'hidden',
-    },
-    circle: {
-      position: 'absolute',
-      width: '400px',
-      height: '400px',
-      borderRadius: '50%',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    imageContainer: {
-      position: 'absolute',
-      width: '120px',
-      height: '120px',
-      perspective: '1000px',
-      cursor: 'pointer',
-      borderRadius: '15px',
-      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
-    },
-    image: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      borderRadius: '15px',
-      transform: 'rotateY(20deg)',
-      transition: 'transform 0.3s',
-    },
-    galleryText: {
-      position: 'absolute',
-      fontSize: '2rem',
-      fontWeight: 'bold',
-      color: '#333',
-      textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-    },
-    phone: {
-      position: 'absolute',
-      bottom: '10%',
-      width: '350px',
-      height: '650px',
-      borderRadius: '40px',
-      backgroundColor: '#222',
-      boxShadow: '0 25px 45px rgba(0, 0, 0, 0.6)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '10px',
-    },
-    phoneScreen: {
-      width: '100%',
-      height: '90%',
-      backgroundColor: '#fff',
-      borderRadius: '30px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      boxShadow: '0 15px 25px rgba(0, 0, 0, 0.4)',
-      overflow: 'hidden',
-    },
-    carouselImage: {
-      width: '200px',
-      height: 'auto',
-      margin: '0 15px',
-      borderRadius: '15px',
-      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
-      cursor: 'pointer',
-      transform: 'perspective(1000px) rotateY(20deg)',
-      transition: 'transform 0.3s',
-    },
-    galleryOverlay: {
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      zIndex: 1000,
-    },
-    galleryOverlayImage: {
-      width: '250px',
-      height: 'auto',
-      margin: '10px',
-      borderRadius: '15px',
-      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
-    },
-    closeButton: {
-      position: 'absolute',
-      top: '20px',
-      right: '20px',
-      fontSize: '1.5rem',
-      color: '#fff',
-      cursor: 'pointer',
-    },
-    heading: {
-      textAlign: 'center',
-      fontSize: '1.2rem',
-      fontWeight: 'bold',
-      color: '#333',
-      marginTop: '10px',
-    },
-  };
+//   const styles = {
+//     container: {
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       flexDirection: 'column',
+//       position: 'relative',
+//       width: '100%',
+//       height: '100vh',
+//       backgroundColor: '#f8f9fa',
+//       overflow: 'hidden',
+//     },
+//     circle: {
+//       position: 'absolute',
+//       width: '400px',
+//       height: '400px',
+//       borderRadius: '50%',
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//     },
+//     imageContainer: {
+//       position: 'absolute',
+//       width: '120px',
+//       height: '120px',
+//       perspective: '1000px',
+//       cursor: 'pointer',
+//       borderRadius: '15px',
+//       boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+//     },
+//     image: {
+//       width: '100%',
+//       height: '100%',
+//       objectFit: 'cover',
+//       borderRadius: '15px',
+//       transform: 'rotateY(20deg)',
+//       transition: 'transform 0.3s',
+//     },
+//     galleryText: {
+//       position: 'absolute',
+//       fontSize: '2rem',
+//       fontWeight: 'bold',
+//       color: '#333',
+//       textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+//     },
+//     phone: {
+//       position: 'absolute',
+//       bottom: '10%',
+//       width: '350px',
+//       height: '650px',
+//       borderRadius: '40px',
+//       backgroundColor: '#222',
+//       boxShadow: '0 25px 45px rgba(0, 0, 0, 0.6)',
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       padding: '10px',
+//     },
+//     phoneScreen: {
+//       width: '100%',
+//       height: '90%',
+//       backgroundColor: '#fff',
+//       borderRadius: '30px',
+//       display: 'flex',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//       boxShadow: '0 15px 25px rgba(0, 0, 0, 0.4)',
+//       overflow: 'hidden',
+//     },
+//     carouselImage: {
+//       width: '200px',
+//       height: 'auto',
+//       margin: '0 15px',
+//       borderRadius: '15px',
+//       boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+//       cursor: 'pointer',
+//       transform: 'perspective(1000px) rotateY(20deg)',
+//       transition: 'transform 0.3s',
+//     },
+//     galleryOverlay: {
+//       position: 'fixed',
+//       top: 0,
+//       left: 0,
+//       width: '100vw',
+//       height: '100vh',
+//       backgroundColor: 'rgba(0, 0, 0, 0.8)',
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       flexDirection: 'column',
+//       zIndex: 1000,
+//     },
+//     galleryOverlayImage: {
+//       width: '250px',
+//       height: 'auto',
+//       margin: '10px',
+//       borderRadius: '15px',
+//       boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+//     },
+//     closeButton: {
+//       position: 'absolute',
+//       top: '20px',
+//       right: '20px',
+//       fontSize: '1.5rem',
+//       color: '#fff',
+//       cursor: 'pointer',
+//     },
+//     heading: {
+//       textAlign: 'center',
+//       fontSize: '1.2rem',
+//       fontWeight: 'bold',
+//       color: '#333',
+//       marginTop: '10px',
+//     },
+//   };
 
-  return (
-    <div style={styles.container}>
-      {/* Rotating images */}
-      {!startPhoneAnimation && (
-        <motion.div
-          style={styles.circle}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-        >
-          {images.map((image, index) => (
-            <div
-              key={index}
-              style={{
-                ...styles.imageContainer,
-                transform: `rotate(${index * 60}deg) translate(200px) rotate(-${index * 60}deg)`,
-              }}
-            >
-              <img
-                src={image.src}
-                alt={`Gallery ${index}`}
-                style={styles.image}
-              />
-              <div style={styles.heading}>{image.year}</div>
-            </div>
-          ))}
-          <div style={styles.galleryText}>Gallery</div>
-        </motion.div>
-      )}
+//   return (
+//     <div style={styles.container}>
+//       {/* Rotating images */}
+//       {!startPhoneAnimation && (
+//         <motion.div
+//           style={styles.circle}
+//           animate={{ rotate: 360 }}
+//           transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+//         >
+//           {images.map((image, index) => (
+//             <div
+//               key={index}
+//               style={{
+//                 ...styles.imageContainer,
+//                 transform: `rotate(${index * 60}deg) translate(200px) rotate(-${index * 60}deg)`,
+//               }}
+//             >
+//               <img
+//                 src={image.src}
+//                 alt={`Gallery ${index}`}
+//                 style={styles.image}
+//               />
+//               <div style={styles.heading}>{image.year}</div>
+//             </div>
+//           ))}
+//           <div style={styles.galleryText}>Gallery</div>
+//         </motion.div>
+//       )}
 
-      {/* Phone with carousel */}
-      {startPhoneAnimation && (
-        <div style={styles.phone}>
-          <motion.div
-            style={styles.phoneScreen}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <motion.div
-              style={{
-                display: 'flex',
-                overflowX: 'auto',
-                padding: '10px',
-              }}
-            >
-              {images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image.src}
-                  alt={`Phone Gallery ${index}`}
-                  style={styles.carouselImage}
-                  onClick={() => handleImageClick(image)}
-                />
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      )}
+//       {/* Phone with carousel */}
+//       {startPhoneAnimation && (
+//         <div style={styles.phone}>
+//           <motion.div
+//             style={styles.phoneScreen}
+//             initial={{ opacity: 0, scale: 0.8 }}
+//             animate={{ opacity: 1, scale: 1 }}
+//             transition={{ duration: 1 }}
+//           >
+//             <motion.div
+//               style={{
+//                 display: 'flex',
+//                 overflowX: 'auto',
+//                 padding: '10px',
+//               }}
+//             >
+//               {images.map((image, index) => (
+//                 <img
+//                   key={index}
+//                   src={image.src}
+//                   alt={`Phone Gallery ${index}`}
+//                   style={styles.carouselImage}
+//                   onClick={() => handleImageClick(image)}
+//                 />
+//               ))}
+//             </motion.div>
+//           </motion.div>
+//         </div>
+//       )}
 
-      {/* Full gallery overlay */}
-      {showGallery && (
-        <div style={styles.galleryOverlay}>
-          <span
-            style={styles.closeButton}
-            onClick={() => setShowGallery(false)}
-          >
-            ✖
-          </span>
-          <motion.div
-            style={{
-              display: 'flex',
-              overflowX: 'auto',
-              marginTop: '20px',
-              padding: '10px',
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            {selectedImages.map((image, index) => (
-              <img
-                key={index}
-                src={image.src}
-                alt={`Selected Gallery ${index}`}
-                style={styles.galleryOverlayImage}
-              />
-            ))}
-          </motion.div>
-        </div>
-      )}
-    </div>
-  );
-};
+//       {/* Full gallery overlay */}
+//       {showGallery && (
+//         <div style={styles.galleryOverlay}>
+//           <span
+//             style={styles.closeButton}
+//             onClick={() => setShowGallery(false)}
+//           >
+//             ✖
+//           </span>
+//           <motion.div
+//             style={{
+//               display: 'flex',
+//               overflowX: 'auto',
+//               marginTop: '20px',
+//               padding: '10px',
+//             }}
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ duration: 1 }}
+//           >
+//             {selectedImages.map((image, index) => (
+//               <img
+//                 key={index}
+//                 src={image.src}
+//                 alt={`Selected Gallery ${index}`}
+//                 style={styles.galleryOverlayImage}
+//               />
+//             ))}
+//           </motion.div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
-export default Gallery;
+// export default Gallery;
