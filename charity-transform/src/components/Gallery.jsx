@@ -156,6 +156,157 @@
 //     </div>
 //   );
 // }
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const Gallery = () => {
+  const categories = ['All', 'Events', 'Workshops', 'Community'];
+  const images = [
+    { src: './src/assets/g1.png', category: 'Events', caption: 'Event 1' },
+    { src: './src/assets/g2.png', category: 'Workshops', caption: 'Workshop 1' },
+    { src: './src/assets/b1.png', category: 'Community', caption: 'Community Work 1' },
+    { src: './src/assets/b2.png', category: 'Events', caption: 'Event 2' },
+    { src: './src/assets/b3.png', category: 'Workshops', caption: 'Workshop 2' },
+    { src: './src/assets/b4.png', category: 'Community', caption: 'Community Work 2' },
+  ];
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  const filteredImages = selectedCategory === 'All'
+    ? images
+    : images.filter(image => image.category === selectedCategory);
+
+  // Internal CSS
+  const styles = {
+    galleryContainer: {
+      padding: '20px',
+      backgroundColor: '#f4f4f9',
+      fontFamily: 'Arial, sans-serif',
+    },
+    filterButtons: {
+      display: 'flex',
+      justifyContent: 'center',
+      marginBottom: '20px',
+    },
+    filterButton: {
+      margin: '0 10px',
+      padding: '10px 20px',
+      background: '#007bff',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      transition: 'background 0.3s',
+    },
+    filterButtonActive: {
+      background: '#0056b3',
+    },
+    galleryGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+      gap: '15px',
+    },
+    galleryItem: {
+      position: 'relative',
+      overflow: 'hidden',
+      borderRadius: '10px',
+      cursor: 'pointer',
+    },
+    galleryImage: {
+      width: '100%',
+      height: 'auto',
+      display: 'block',
+      transition: 'transform 0.3s ease-in-out',
+    },
+    galleryCaption: {
+      position: 'absolute',
+      bottom: '10px',
+      left: '10px',
+      color: '#fff',
+      background: 'rgba(0, 0, 0, 0.5)',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      fontSize: '0.9rem',
+    },
+    lightbox: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      background: 'rgba(0, 0, 0, 0.9)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 1000,
+      cursor: 'pointer',
+    },
+    lightboxImage: {
+      maxWidth: '90%',
+      maxHeight: '80%',
+      borderRadius: '10px',
+    },
+    lightboxCaption: {
+      marginTop: '10px',
+      color: '#fff',
+      fontSize: '1rem',
+    },
+  };
+
+  return (
+    <div style={styles.galleryContainer}>
+      {/* Filter Buttons */}
+      <div style={styles.filterButtons}>
+        {categories.map(category => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            style={{
+              ...styles.filterButton,
+              ...(selectedCategory === category ? styles.filterButtonActive : {}),
+            }}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Masonry Gallery */}
+      <div style={styles.galleryGrid}>
+        {filteredImages.map((image, index) => (
+          <motion.div
+            key={index}
+            style={styles.galleryItem}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setLightboxImage(image)}
+          >
+            <img src={image.src} alt={image.caption} style={styles.galleryImage} />
+            <div style={styles.galleryCaption}>{image.caption}</div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div style={styles.lightbox} onClick={() => setLightboxImage(null)}>
+          <motion.img
+            src={lightboxImage.src}
+            alt={lightboxImage.caption}
+            style={styles.lightboxImage}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <span style={styles.lightboxCaption}>{lightboxImage.caption}</span>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Gallery;
+
 // import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
 
